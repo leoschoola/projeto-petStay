@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetStay - Hospedagem para Pets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PetStay</h1>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#instalacoes">Instalações</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#faca-uma-reserva">Faça uma reserva</a></li>
+                    <li><a href="#cadastro-pet">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="inicio">
+            <h2>O lar longe do lar para o seu melhor amigo!</h2>
+            <p>Conforto, segurança e muita diversão esperam pelo seu pet na PetStay.</p>
+            <a href="#contato" class="btn">Entre em Contato</a>
+            <a href="#servicos" class="btn btn-secondary">Nossos Serviços</a>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>Hospedagem de Luxo</h3>
+                    <p>Suítes individuais, camas confortáveis e um ambiente tranquilo para o descanso do seu pet.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Recreação e Exercícios</h3>
+                    <p>Áreas de lazer amplas, brinquedos interativos e atividades supervisionadas para gastar energia.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Cuidados Especiais</h3>
+                    <p>Administração de medicação, dietas personalizadas e atenção individualizada para pets com necessidades especiais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="instalacoes">
+            <h2>Nossas Instalações</h2>
+            <div class="facility-grid">
+                <div class="facility-item">
+                    <h3>Suítes Confortáveis</h3>
+                    <p>Espaços privativos, climatizados e com camas aconchegantes para o bem-estar do seu animal.</p>
+                </div>
+                <div class="facility-item">
+                    <h3>Área de Recreação</h3>
+                    <p>Um grande espaço ao ar livre com brinquedos e gramado para muita diversão e socialização.</p>
+                </div>
+                <div class="facility-item">
+                    <h3>Spa Pet</h3>
+                    <p>Serviços de banho, tosa e massagem relaxante para deixar seu pet ainda mais feliz e cheiroso.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos">
+            <h2>O que dizem nossos clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <p>"A PetStay foi a melhor escolha para o Thor! Ele voltou feliz e bem cuidado. Recomendo muito!"</p>
+                    <p class="client-name">- Ana Paula S.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Fiquei muito tranquila ao deixar a Luna. A equipe é super atenciosa e as instalações são impecáveis."</p>
+                    <p class="client-name">- Carlos M.</p>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Meu gato, o Félix, amou o Spa Pet! Ele nunca esteve tão relaxado. Com certeza voltaremos!"</p>
+                    <p class="client-name">- Juliana R.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Ficou com alguma dúvida ou quer saber mais sobre nossos serviços?</p>
+            <div class="contact-info">
+                <p>Fale conosco pelo WhatsApp:</p>
+                <a href="https://wa.me/5511997978901" target="_blank" class="btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+                    Clique Aqui!
+                </a>
+                <p>Ou ligue para nós!</p>
+            </div>
+        </section>
+
+        <section id="cadastro-pet">
+            <h2>Cadastre seu Pet</h2>
+            <form id="cadastroPetForm">
+                <div class="form-group">
+                    <label for="pet-name">Nome do Pet:</label>
+                    <input type="text" id="pet-name" name="petName" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-species">Qual animal é:</label>
+                    <select id="pet-species" name="petSpecies" required>
+                        <option value="">Selecione</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="passaro">Pássaro</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pet-breed">Raça:</label>
+                    <input type="text" id="pet-breed" name="petBreed">
+                </div>
+                <div class="form-group">
+                    <label for="pet-color">Cor:</label>
+                    <input type="text" id="pet-color" name="petColor">
+                </div>
+                <div class="form-group">
+                    <label for="pet-age">Idade (anos):</label>
+                    <input type="number" id="pet-age" name="petAge" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Sexo:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="sex-macho" name="petSex" value="Macho">
+                        <label for="sex-macho">Macho</label>
+                        <input type="radio" id="sex-femea" name="petSex" value="Fêmea">
+                        <label for="sex-femea">Fêmea</label>
+                    </div>
+                </div>
+                <button type="submit">Cadastrar Pet</button>
+                <div id="cadastroPetMessage" class="form-message"></div>
+            </form>
+        </section>
+
+        <section id="faca-uma-reserva">
+            <h2>Faça uma Reserva</h2>
+            <form id="reservaForm">
+                <div class="form-group">
+                    <label for="tutor-name">Nome do Tutor:</label>
+                    <input type="text" id="tutor-name" name="tutorName" required>
+                </div>
+                <div class="form-group">
+                    <label for="tutor-contact">Contato do Tutor (Telefone ou Email):</label>
+                    <input type="text" id="tutor-contact" name="tutorContact" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-to-reserve">Nome do Pet a Hospedar:</label>
+                    <input type="text" id="pet-to-reserve" name="petToReserve" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkin-date">Data de Check-in:</label>
+                    <input type="date" id="checkin-date" name="checkinDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-date">Data de Check-out:</label>
+                    <input type="date" id="checkout-date" name="checkoutDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferences">Preferências (ex: dieta especial, brinquedos favoritos):</label>
+                    <textarea id="preferences" name="preferences" rows="4"></textarea>
+                </div>
+                <button type="submit">Agendar Reserva</button>
+                <div id="reservaMessage" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-logo">PetStay</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#instalacoes">Instalações</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#faca-uma-reserva">Faça uma reserva</a></li>
+                    <li><a href="#cadastro-pet">Cadastro</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 25px; vertical-align: middle;"></a>
+                <a href="#" target="_blank" aria-label="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width: 25px; vertical-align: middle;"></a>
+                <a href="#" target="_blank" aria-label="Twitter"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" style="width: 25px; vertical-align: middle;"></a>
+            </div>
+            <div class="contact-info-footer">
+                <p>Endereço: Rua dos Pets Felizes, 123 - Bairro Amigo Animal - São Paulo/SP</p>
+                <p>Telefone: (+55) 11 99797-8901</p>
+                <p>Email: contato@petstay.com.br</p>
+            </div>
+            <p class="copyright">&copy; 2023 PetStay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+<script src="app.js"></script>
+</body>
+</html>

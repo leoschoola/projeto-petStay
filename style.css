@@ -1,0 +1,503 @@
+:root {
+    --primary-orange: #F29C0B;
+    --primary-yellow: #FEF9CE;
+    --secondary-light-gray: #F8FAFC;
+    --secondary-dark-brown: #92400E;
+    --text-color: #333;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-light-gray);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--secondary-light-gray);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-yellow);
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none; /* Hidden by default, shown on smaller screens */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+.main-content {
+    padding-top: var(--header-height); /* Add padding to prevent content from going under the fixed header */
+}
+
+/* General Section Styling */
+section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--secondary-dark-brown);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-dark-brown);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-dark-brown);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-orange);
+}
+
+/* Hero Section (Início) */
+#inicio {
+    background-color: var(--primary-yellow);
+    color: var(--secondary-dark-brown);
+    padding: 150px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height)); /* Full height minus header */
+    position: relative;
+    z-index: 1;
+}
+
+#inicio h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--secondary-dark-brown);
+}
+
+#inicio p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+/* Services & Facilities & Depoimentos sections */
+.service-grid, .facility-grid, .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-item, .facility-item, .testimonial-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.service-item h3, .facility-item h3 {
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.service-item p, .facility-item p, .testimonial-item p {
+    color: #666;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-item .client-name {
+    font-weight: 700;
+    color: var(--secondary-dark-brown);
+}
+
+/* Contact Section */
+#contato {
+    background-color: var(--primary-yellow);
+    color: var(--secondary-dark-brown);
+}
+
+#contato .contact-info {
+    margin-top: 40px;
+}
+
+#contato .contact-info a {
+    color: var(--secondary-dark-brown);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+#contato .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Forms Section Styling (Cadastro & Reserva) */
+#cadastro-pet, #faca-uma-reserva {
+    background-color: var(--secondary-light-gray);
+    color: var(--text-color);
+}
+
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--secondary-dark-brown);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.form-group .radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+form button[type="submit"] {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--secondary-dark-brown);
+}
+
+/* Feedback Message */
+.form-message {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: none; /* Hidden by default */
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-dark-brown);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-yellow);
+}
+
+footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-links ul li {
+    margin: 0 15px 10px 15px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links ul li a:hover {
+    color: var(--primary-orange);
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--primary-orange);
+}
+
+footer .contact-info-footer {
+    margin-top: 30px;
+    font-size: 0.95rem;
+}
+
+footer .contact-info-footer p {
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    header .container {
+        padding: 0 15px;
+    }
+
+    nav {
+        display: none; /* Hide regular nav on small screens */
+        width: 100%;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        background-color: var(--primary-orange);
+        flex-direction: column;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        z-index: 999; /* Below header, above content */
+    }
+
+    nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0;
+        background-color: var(--primary-orange); /* Ensure background for dropdown */
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    #inicio {
+        padding: 120px 15px;
+        min-height: auto; /* Allow content to dictate height */
+    }
+
+    #inicio h2 {
+        font-size: 2.5rem;
+    }
+
+    #inicio p {
+        font-size: 1.1rem;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .service-grid, .facility-grid, .testimonials-grid {
+        grid-template-columns: 1fr; /* Single column layout for grids */
+        gap: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    form button[type="submit"] {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    footer .footer-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-links ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #inicio h2 {
+        font-size: 2rem;
+    }
+
+    #inicio p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        display: block; /* Make buttons stack on very small screens */
+        width: calc(100% - 20px); /* Adjust for margin */
+        margin: 10px auto;
+    }
+}
