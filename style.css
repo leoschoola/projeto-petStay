@@ -20,7 +20,6 @@ body {
     background-color: var(--secondary-light-gray);
 }
 
-/* Header */
 header {
     background-color: var(--primary-orange);
     color: white;
@@ -73,23 +72,21 @@ nav ul li a:hover {
     color: var(--primary-yellow);
 }
 
-/* Hamburger Menu Icon */
 .menu-toggle {
-    display: none; /* Hidden by default, shown on smaller screens */
+    display: none; 
     font-size: 2rem;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Ensure it's above other elements */
+    z-index: 1001; 
 }
 
 .main-content {
-    padding-top: var(--header-height); /* Add padding to prevent content from going under the fixed header */
+    padding-top: var(--header-height); 
 }
 
-/* General Section Styling */
 section {
     padding: 80px 20px;
     text-align: center;
@@ -127,7 +124,6 @@ section h2 {
     background-color: var(--primary-orange);
 }
 
-/* Hero Section (Início) */
 #inicio {
     background-color: var(--primary-yellow);
     color: var(--secondary-dark-brown);
@@ -136,7 +132,7 @@ section h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - var(--header-height)); /* Full height minus header */
+    min-height: calc(100vh - var(--header-height)); 
     position: relative;
     z-index: 1;
 }
@@ -154,7 +150,6 @@ section h2 {
     max-width: 800px;
 }
 
-/* Services & Facilities & Depoimentos sections */
 .service-grid, .facility-grid, .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,7 +185,6 @@ section h2 {
     color: var(--secondary-dark-brown);
 }
 
-/* Contact Section */
 #contato {
     background-color: var(--primary-yellow);
     color: var(--secondary-dark-brown);
@@ -212,7 +206,6 @@ section h2 {
     text-decoration: underline;
 }
 
-/* Forms Section Styling (Cadastro & Reserva) */
 #cadastro-pet, #faca-uma-reserva {
     background-color: var(--secondary-light-gray);
     color: var(--text-color);
@@ -279,13 +272,12 @@ form button[type="submit"]:hover {
     background-color: var(--secondary-dark-brown);
 }
 
-/* Feedback Message */
 .form-message {
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
-    display: none; /* Hidden by default */
+    display: none; 
 }
 
 .form-message.success {
@@ -301,7 +293,6 @@ form button[type="submit"]:hover {
 }
 
 
-/* Footer */
 footer {
     background-color: var(--secondary-dark-brown);
     color: white;
@@ -370,14 +361,13 @@ footer .copyright {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* --- Responsividade --- */
 @media (max-width: 768px) {
     header .container {
         padding: 0 15px;
     }
 
     nav {
-        display: none; /* Hide regular nav on small screens */
+        display: none; 
         width: 100%;
         position: absolute;
         top: var(--header-height);
@@ -385,18 +375,18 @@ footer .copyright {
         background-color: var(--primary-orange);
         flex-direction: column;
         box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-        z-index: 999; /* Below header, above content */
+        z-index: 999;
     }
 
     nav.active {
-        display: flex; /* Show nav when active */
+        display: flex;
     }
 
     nav ul {
         flex-direction: column;
         width: 100%;
         padding: 20px 0;
-        background-color: var(--primary-orange); /* Ensure background for dropdown */
+        background-color: var(--primary-orange); 
     }
 
     nav ul li {
@@ -416,12 +406,12 @@ footer .copyright {
     }
 
     .menu-toggle {
-        display: block; /* Show hamburger icon */
+        display: block; 
     }
 
     #inicio {
         padding: 120px 15px;
-        min-height: auto; /* Allow content to dictate height */
+        min-height: auto; 
     }
 
     #inicio h2 {
@@ -441,7 +431,7 @@ footer .copyright {
     }
 
     .service-grid, .facility-grid, .testimonials-grid {
-        grid-template-columns: 1fr; /* Single column layout for grids */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
@@ -496,8 +486,8 @@ footer .copyright {
     }
 
     .btn {
-        display: block; /* Make buttons stack on very small screens */
-        width: calc(100% - 20px); /* Adjust for margin */
+        display: block; 
+        width: calc(100% - 20px); 
         margin: 10px auto;
     }
 }
